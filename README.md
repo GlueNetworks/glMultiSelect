@@ -28,6 +28,21 @@ An interface to both view and edit either a single or multiple option selections
 * error - init with an error message. requires valid to be false in order to be displayed
 * onChange = define a event handler for onChange. We fire this when the value actually changes unlike native browsers which only call it on blur
 
+Plus these additional Chosen settings, details here: http://harvesthq.github.io/chosen/options.html 
+
+* multiple
+* noResultsText
+* allowSingleDeselect
+* disableSearchThreshold
+* disableSearch
+* enableSplitWordSearch
+* inheritSelectClasses
+* maxSelectedOptions
+* searchContains
+* singleBackstrokeDelete
+* displayDisabledOptions
+* displaySelectedOptions
+
 ### Example 
 
     var mySettings = {
@@ -38,9 +53,20 @@ An interface to both view and edit either a single or multiple option selections
       value: "cats",
       invalid: false,
       disabled: false,
+      multiple: true,
       onChange: function(newValue,oldValue){ 
-        console.log(newValue);  
-      }
+              console.log(newValue);  
+      },
+      options = [
+         {label: "Bmw", value: "Bmw", group: "Cars"},
+         {label: "Volvo", value: "Volvo", group: "Cars"},
+         {label: "Ford", value: "Ford", group: "Cars"},
+         {label: "Toyota", value: "Toyota", group: "Cars"},
+         {label: "apple", value: "apple", group: "Food"},
+         {label: "pear", value: "pear", group: "Food"},
+         {label: "orange", value: "orange", group: "Food"},
+         {label: "grapes", value: "grapes", group: "Food"},
+      ]      
     };
 
 ## API Methods

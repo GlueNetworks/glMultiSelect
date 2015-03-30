@@ -33,8 +33,8 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
                 singleBackstrokeDelete: 'single-backstroke-delete',
                 displayDisabledOptions: 'display-disabled-options',
                 displaySelectedOptions: 'display-selected-options',
-                multiple: 'multiple',
-                width: 'width'
+                multiple: 'multiple'
+                 //width: 'width'   // set width in containing elmeents style
             }
 
             scope.api = scope.api || {};

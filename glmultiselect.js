@@ -1,5 +1,5 @@
 /*! 
-  glMultiSelect v(0.0.4) 
+  glMultiSelect v(0.0.5) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
   Release Date: 2015-03-30 
@@ -50,8 +50,7 @@ angular.module("glMultiSelect", [ "localytics.directives" ]), angular.module("gl
                 singleBackstrokeDelete: "single-backstroke-delete",
                 displayDisabledOptions: "display-disabled-options",
                 displaySelectedOptions: "display-selected-options",
-                multiple: "multiple",
-                width: "width"
+                multiple: "multiple"
             };
             scope.api = scope.api || {}, scope.api._data = {}, scope.api._data.value = angular.isUndefined(scope.settings.value) ? void 0 : scope.settings.value, 
             scope.api._data.autoClose = angular.isUndefined(scope.settings.autoClose) ? !1 : scope.settings.autoClose, 
