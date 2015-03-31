@@ -29,16 +29,16 @@ gl-multi-select .chosen-container .chosen-drop .chosen-search input { line-heigh
 /* line 103, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results { display: block; max-height: 160px; overflow: auto; list-style: none; margin: 0; padding: 0; }
 /* line 112, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
-gl-multi-select .chosen-container .chosen-drop ul.chosen-results li { padding-left: 35px; line-height: 25px; }
-/* line 125, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+gl-multi-select .chosen-container .chosen-drop ul.chosen-results li { display: block; padding-left: 35px; line-height: 25px; }
+/* line 126, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li.group-result { padding-left: 10px; }
-/* line 140, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 141, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-with-drop { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzU4NTk1QiIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); }
-/* line 144, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 145, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-with-drop .chosen-drop { display: block; }
-/* line 151, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 152, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .gl-multi-select-value { padding-left: 5px; display: inline; }
-/* line 156, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 157, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .gl-multi-select-label { padding-right: 5px; max-width: 50%; display: inline; }
 
 /* line 3, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
