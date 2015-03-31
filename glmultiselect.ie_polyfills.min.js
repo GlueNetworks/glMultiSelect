@@ -1,5 +1,5 @@
 /*! 
-  glMultiSelect v(0.0.9) 
+  glMultiSelect v(0.0.10) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
   Release Date: 2015-03-30 
