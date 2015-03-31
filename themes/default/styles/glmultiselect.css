@@ -79,17 +79,17 @@ gl-multi-select .gl-error-msg { margin: 5px 0 0 0; padding: 0; color: #F05A28; }
 gl-multi-select { font-family: "HellschreiberSans-Medium"; font-size: 17px; color: #58585B; }
 /* line 7, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container { border: 1px solid #BBBDC0; }
-/* line 11, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
-gl-multi-select .chosen-container p.gl-error-msg { font-size: 16px; }
-/* line 38, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 34, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-choice span { font-family: "HellschreiberSans-Light"; font-size: 14px; color: white; }
-/* line 52, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 48, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-field input { font-size: 14px; }
-/* line 67, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 63, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container .chosen-drop .chosen-search input { font-size: 16px; }
-/* line 85, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 81, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li.group-result { color: #808284; }
-/* line 100, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 96, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .gl-multi-select-label { font-family: "HellschreiberSans-Medium"; }
-/* line 104, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 100, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .gl-multi-select-value { font-family: "HellschreiberSans-Light"; }
+/* line 104, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+gl-multi-select p.gl-error-msg { font-size: 16px; }
