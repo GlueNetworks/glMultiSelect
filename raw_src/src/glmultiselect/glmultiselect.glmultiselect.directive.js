@@ -46,7 +46,7 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
             scope.api._data.name = angular.isUndefined(scope.settings.name) ? undefined : scope.settings.name;
             scope.api._data.label = angular.isUndefined(scope.settings.label) ? undefined : scope.settings.label;
             scope.api._data.disabled = angular.isUndefined(scope.settings.disabled) ? false : scope.settings.disabled;
-            scope.api._data.placeholder = angular.isUndefined(scope.settings.placeholder) ? undefined : scope.settings.placeholder;
+            scope.api._data.placeholder = angular.isString(scope.settings.placeholder) ? scope.settings.placeholder : "&nbsp;";  // &nbsp; HACK for image placeholder as chosen puts in its own text if you dont supply a placeholder
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? undefined : scope.settings.error;
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? true : scope.settings.editable;
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? undefined : scope.settings.options;
@@ -60,9 +60,7 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
                 }
             });
 
-            if (angular.isString(scope.settings.placeholder)) {
-                chosenAttrOptions += 'data-placeholder="' + scope.settings.placeholder + '" '
-            }
+            chosenAttrOptions += 'data-placeholder="' + scope.api._data.placeholder + '" '
 
             function setEditMode() {
                 element.children().remove();
@@ -73,10 +71,11 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
                 elementSelect = angular.element(templateSelect);
                 //elementSelect.chosen({inherit_select_classes:true});
                 element.append($compile(elementSelect)(childScope));
-                errorMsgCheck();
+                // WE MUST WAIT FOR CHOSEN TO BE READY
                 elementSelect.on('chosen:ready',function(){
                     processEmptiness(scope.api._data.value);
                     element.find('.chosen-results').attr('data-gl-super-scroll', 'data-gl-super-scroll');
+                    errorMsgCheck();
                 })
             }
 

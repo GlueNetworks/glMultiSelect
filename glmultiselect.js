@@ -1,5 +1,5 @@
 /*! 
-  glMultiSelect v(0.0.8) 
+  glMultiSelect v(0.0.9) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
   Release Date: 2015-03-30 
@@ -18,8 +18,10 @@ angular.module("glMultiSelect", [ "localytics.directives" ]), angular.module("gl
                 scope.api._data.optionsMaxHeight, angular.isUndefined(scope.api._data.multiple) ? "" : "multiple";
                 templateSelect = '<select class="jason" style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>', 
                 elementSelect = angular.element(templateSelect), //elementSelect.chosen({inherit_select_classes:true});
-                element.append($compile(elementSelect)(childScope)), errorMsgCheck(), elementSelect.on("chosen:ready", function() {
-                    processEmptiness(scope.api._data.value), element.find(".chosen-results").attr("data-gl-super-scroll", "data-gl-super-scroll");
+                element.append($compile(elementSelect)(childScope)), // WE MUST WAIT FOR CHOSEN TO BE READY
+                elementSelect.on("chosen:ready", function() {
+                    processEmptiness(scope.api._data.value), element.find(".chosen-results").attr("data-gl-super-scroll", "data-gl-super-scroll"), 
+                    errorMsgCheck();
                 });
             }
             function processEmptiness(value) {
@@ -58,7 +60,8 @@ angular.module("glMultiSelect", [ "localytics.directives" ]), angular.module("gl
             scope.api._data.name = angular.isUndefined(scope.settings.name) ? void 0 : scope.settings.name, 
             scope.api._data.label = angular.isUndefined(scope.settings.label) ? void 0 : scope.settings.label, 
             scope.api._data.disabled = angular.isUndefined(scope.settings.disabled) ? !1 : scope.settings.disabled, 
-            scope.api._data.placeholder = angular.isUndefined(scope.settings.placeholder) ? void 0 : scope.settings.placeholder, 
+            scope.api._data.placeholder = angular.isString(scope.settings.placeholder) ? scope.settings.placeholder : "&nbsp;", 
+            // &nbsp; HACK for image placeholder as chosen puts in its own text if you dont supply a placeholder
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? void 0 : scope.settings.error, 
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? !0 : scope.settings.editable, 
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? void 0 : scope.settings.options, 
@@ -66,7 +69,7 @@ angular.module("glMultiSelect", [ "localytics.directives" ]), angular.module("gl
             var chosenAttrOptions = "";
             angular.forEach(chosenAttrs, function(val, key) {
                 angular.isUndefined(scope.settings[key]) || 1 != scope.settings[key] || angular.isUndefined(val) || (chosenAttrOptions += val + " ");
-            }), angular.isString(scope.settings.placeholder) && (chosenAttrOptions += 'data-placeholder="' + scope.settings.placeholder + '" '), 
+            }), chosenAttrOptions += 'data-placeholder="' + scope.api._data.placeholder + '" ', 
             scope.api.setLabel = function(label) {
                 scope.api._data.label = label;
             }, scope.api.getLabel = function() {
