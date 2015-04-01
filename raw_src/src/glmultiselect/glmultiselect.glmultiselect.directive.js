@@ -65,13 +65,10 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
             function setEditMode() {
                 element.children().remove();
                 scope.api._data.editable = true;
-                var maxH = scope.api._data.optionsMaxHeight;
-                var multi = (angular.isUndefined(scope.api._data.multiple)) ? "" : "multiple"
                 templateSelect = '<select class="jason" style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>';
                 elementSelect = angular.element(templateSelect);
-                //elementSelect.chosen({inherit_select_classes:true});
+                if(scope.api._data.disabled){ elementSelect.attr('disabled',true) }
                 element.append($compile(elementSelect)(childScope));
-                // WE MUST WAIT FOR CHOSEN TO BE READY
                 elementSelect.on('chosen:ready',function(){
                     processEmptiness(scope.api._data.value);
                     element.find('.chosen-results').attr('data-gl-super-scroll', 'data-gl-super-scroll');

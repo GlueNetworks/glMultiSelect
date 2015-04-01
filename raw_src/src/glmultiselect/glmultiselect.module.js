@@ -1,1 +1,1 @@
-angular.module('glMultiSelect', ['localytics.directives']);
+angular.module('glMultiSelect', ['glChosen']);

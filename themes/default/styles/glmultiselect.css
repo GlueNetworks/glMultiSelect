@@ -88,8 +88,8 @@ gl-multi-select .chosen-container .chosen-drop .chosen-search input { font-size:
 /* line 81, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li.group-result { color: #808284; }
 /* line 96, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
-gl-multi-select .gl-multi-select-label { font-family: "HellschreiberSans-Medium"; }
-/* line 100, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
-gl-multi-select .gl-multi-select-value { font-family: "HellschreiberSans-Light"; }
-/* line 104, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+gl-multi-select .gl-multi-select-label { font-family: "HellschreiberSans-Medium"; font-size: 17px; }
+/* line 101, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+gl-multi-select .gl-multi-select-value { font-family: "HellschreiberSans-Light"; font-size: 17px; }
+/* line 106, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select p.gl-error-msg { font-size: 16px; }

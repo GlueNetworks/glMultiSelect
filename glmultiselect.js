@@ -1,10 +1,10 @@
 /*! 
-  glMultiSelect v(0.0.11) 
+  glMultiSelect v(0.0.12) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
-  Release Date: 2015-03-30 
+  Release Date: 2015-03-31 
 */
-angular.module("glMultiSelect", [ "localytics.directives" ]), angular.module("glMultiSelect").directive("glMultiSelect", [ "$compile", "$timeout", function($compile) {
+angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect").directive("glMultiSelect", [ "$compile", "$timeout", function($compile) {
     "use strict";
     return {
         restrict: "E",
@@ -14,12 +14,9 @@ angular.module("glMultiSelect", [ "localytics.directives" ]), angular.module("gl
         },
         link: function(scope, element) {
             function setEditMode() {
-                element.children().remove(), scope.api._data.editable = !0;
-                scope.api._data.optionsMaxHeight, angular.isUndefined(scope.api._data.multiple) ? "" : "multiple";
-                templateSelect = '<select class="jason" style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>', 
-                elementSelect = angular.element(templateSelect), //elementSelect.chosen({inherit_select_classes:true});
-                element.append($compile(elementSelect)(childScope)), // WE MUST WAIT FOR CHOSEN TO BE READY
-                elementSelect.on("chosen:ready", function() {
+                element.children().remove(), scope.api._data.editable = !0, templateSelect = '<select class="jason" style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>', 
+                elementSelect = angular.element(templateSelect), scope.api._data.disabled && elementSelect.attr("disabled", !0), 
+                element.append($compile(elementSelect)(childScope)), elementSelect.on("chosen:ready", function() {
                     processEmptiness(scope.api._data.value), element.find(".chosen-results").attr("data-gl-super-scroll", "data-gl-super-scroll"), 
                     errorMsgCheck();
                 });
