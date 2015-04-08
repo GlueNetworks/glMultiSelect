@@ -1,5 +1,5 @@
 /*! 
-  glMultiSelect v(0.0.16) 
+  glMultiSelect v(0.0.17) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
   Release Date: 2015-04-08 
@@ -56,10 +56,10 @@ angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect")
             scope.api._data.valid = angular.isUndefined(scope.settings.valid) ? !0 : scope.settings.valid, 
             scope.api._data.name = angular.isUndefined(scope.settings.name) ? void 0 : scope.settings.name, 
             scope.api._data.id = angular.isUndefined(scope.settings.id) ? void 0 : scope.settings.id, 
-            scope.api._data.label = angular.isUndefined(scope.settings.label) ? void 0 : scope.settings.label, 
             scope.api._data.disabled = angular.isUndefined(scope.settings.disabled) ? !1 : scope.settings.disabled, 
             scope.api._data.placeholder = angular.isString(scope.settings.placeholder) ? scope.settings.placeholder : "&nbsp;", 
             // &nbsp; HACK for image placeholder as chosen puts in its own text if you dont supply a placeholder
+            scope.api._data.label = angular.isUndefined(scope.settings.label) ? angular.isUndefined(scope.settings.placeholder) ? void 0 : scope.settings.placeholder : scope.settings.label, 
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? void 0 : scope.settings.error, 
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? !0 : scope.settings.editable, 
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? void 0 : scope.settings.options, 

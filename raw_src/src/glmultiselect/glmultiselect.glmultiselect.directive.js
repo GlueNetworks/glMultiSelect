@@ -45,9 +45,9 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
             scope.api._data.valid = angular.isUndefined(scope.settings.valid) ? true : scope.settings.valid;
             scope.api._data.name = angular.isUndefined(scope.settings.name) ? undefined : scope.settings.name;
             scope.api._data.id = angular.isUndefined(scope.settings.id) ? undefined : scope.settings.id;
-            scope.api._data.label = angular.isUndefined(scope.settings.label) ? undefined : scope.settings.label;
             scope.api._data.disabled = angular.isUndefined(scope.settings.disabled) ? false : scope.settings.disabled;
             scope.api._data.placeholder = angular.isString(scope.settings.placeholder) ? scope.settings.placeholder : "&nbsp;";  // &nbsp; HACK for image placeholder as chosen puts in its own text if you dont supply a placeholder
+            scope.api._data.label = angular.isUndefined(scope.settings.label) ? angular.isUndefined(scope.settings.placeholder) ? undefined : scope.settings.placeholder : scope.settings.label;
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? undefined : scope.settings.error;
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? true : scope.settings.editable;
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? undefined : scope.settings.options;
