@@ -1,8 +1,8 @@
 /*! 
-  glMultiSelect v(0.0.13) 
+  glMultiSelect v(0.0.14) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
-  Release Date: 2015-03-31 
+  Release Date: 2015-04-08 
 */
 angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect").directive("glMultiSelect", [ "$compile", "$timeout", function($compile) {
     "use strict";
@@ -14,7 +14,7 @@ angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect")
         },
         link: function(scope, element) {
             function setEditMode() {
-                element.children().remove(), scope.api._data.editable = !0, templateSelect = '<select class="jason" style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>', 
+                element.children().remove(), scope.api._data.editable = !0, templateSelect = "<select " + id + ' style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>', 
                 elementSelect = angular.element(templateSelect), scope.api._data.disabled && elementSelect.attr("disabled", !0), 
                 element.append($compile(elementSelect)(childScope)), elementSelect.on("chosen:ready", function() {
                     processEmptiness(scope.api._data.value), element.find(".chosen-results").attr("data-gl-super-scroll", "data-gl-super-scroll"), 
@@ -55,6 +55,7 @@ angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect")
             scope.api._data.autoClose = angular.isUndefined(scope.settings.autoClose) ? !1 : scope.settings.autoClose, 
             scope.api._data.valid = angular.isUndefined(scope.settings.valid) ? !0 : scope.settings.valid, 
             scope.api._data.name = angular.isUndefined(scope.settings.name) ? void 0 : scope.settings.name, 
+            scope.api._data.id = angular.isUndefined(scope.settings.id) ? void 0 : scope.settings.id, 
             scope.api._data.label = angular.isUndefined(scope.settings.label) ? void 0 : scope.settings.label, 
             scope.api._data.disabled = angular.isUndefined(scope.settings.disabled) ? !1 : scope.settings.disabled, 
             scope.api._data.placeholder = angular.isString(scope.settings.placeholder) ? scope.settings.placeholder : "&nbsp;", 
@@ -62,8 +63,14 @@ angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect")
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? void 0 : scope.settings.error, 
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? !0 : scope.settings.editable, 
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? void 0 : scope.settings.options, 
-            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? scope.settings.onChange : void 0;
-            var chosenAttrOptions = "";
+            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? function(val) {
+                scope.settings.onChange(val, {
+                    id: scope.api._data.id,
+                    name: scope.api._data.name,
+                    settings: scope.settings
+                });
+            } : void 0;
+            var id = angular.isUndefined(scope.api._data.id) ? "" : "id=" + scope.api._data.id + '"', chosenAttrOptions = "";
             angular.forEach(chosenAttrs, function(val, key) {
                 angular.isUndefined(scope.settings[key]) || 1 != scope.settings[key] || angular.isUndefined(val) || (chosenAttrOptions += val + " ");
             }), chosenAttrOptions += 'data-placeholder="' + scope.api._data.placeholder + '" ', 

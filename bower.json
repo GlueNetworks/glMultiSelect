@@ -1,6 +1,6 @@
 {
   "name": "glMultiSelect",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "dependencies": {
     "GlueJasmineMatchers": "GlueNetworks/GlueJasmineMatchers#0.0.2",
     "angular": "1.3.15",
@@ -20,6 +20,6 @@
   },
   "devDependencies": {},
   "meta": {
-    "changesetId": "e48eae2b31e876d3c9d6c6bc181b907c05670ff7"
+    "changesetId": "cccf7068de962263aeb1ec4c39d01e9f3dbb6199"
   }
 }

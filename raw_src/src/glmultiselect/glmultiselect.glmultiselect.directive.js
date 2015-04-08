@@ -44,14 +44,16 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
             scope.api._data.autoClose = angular.isUndefined(scope.settings.autoClose) ? false : scope.settings.autoClose;
             scope.api._data.valid = angular.isUndefined(scope.settings.valid) ? true : scope.settings.valid;
             scope.api._data.name = angular.isUndefined(scope.settings.name) ? undefined : scope.settings.name;
+            scope.api._data.id = angular.isUndefined(scope.settings.id) ? undefined : scope.settings.id;
             scope.api._data.label = angular.isUndefined(scope.settings.label) ? undefined : scope.settings.label;
             scope.api._data.disabled = angular.isUndefined(scope.settings.disabled) ? false : scope.settings.disabled;
             scope.api._data.placeholder = angular.isString(scope.settings.placeholder) ? scope.settings.placeholder : "&nbsp;";  // &nbsp; HACK for image placeholder as chosen puts in its own text if you dont supply a placeholder
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? undefined : scope.settings.error;
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? true : scope.settings.editable;
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? undefined : scope.settings.options;
-            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? scope.settings.onChange : undefined;
+            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? function(val){ scope.settings.onChange(val, {id:scope.api._data.id,name:scope.api._data.name,settings:scope.settings} ); } : undefined;
 
+            var id = angular.isUndefined(scope.api._data.id) ? "" : "id="+scope.api._data.id+'"';
             var chosenAttrOptions = "";
 
             angular.forEach(chosenAttrs, function (val, key) {
@@ -65,7 +67,7 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
             function setEditMode() {
                 element.children().remove();
                 scope.api._data.editable = true;
-                templateSelect = '<select class="jason" style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>';
+                templateSelect = '<select '+id+' style="width: 100%;" chosen ' + chosenAttrOptions + ' data-ng-model="api._data.value" data-ng-options="option.value as option.label group by option.group for option in api._data.options"><option value=""></option></select>';
                 elementSelect = angular.element(templateSelect);
                 if(scope.api._data.disabled){ elementSelect.attr('disabled',true) }
                 element.append($compile(elementSelect)(childScope));
