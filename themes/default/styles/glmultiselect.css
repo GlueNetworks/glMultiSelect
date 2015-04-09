@@ -7,93 +7,95 @@
 /* line 1, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select { margin: 0; padding: 0; word-wrap: break-word; }
 /* line 7, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
-gl-multi-select .chosen-container { margin: 0; padding: 0; position: relative; display: inline-block; vertical-align: middle; }
-/* line 21, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+gl-multi-select .chosen-container { margin: 0; padding: 0; position: relative; display: inline-block; vertical-align: middle; -moz-box-sizing: border-box; box-sizing: border-box; height: 30px; }
+/* line 10, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+gl-multi-select .chosen-container.chosen-with-drop { height: auto; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzU4NTk1QiIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); }
+/* line 15, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+gl-multi-select .chosen-container.chosen-with-drop .chosen-drop { display: block; }
+/* line 35, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container.chosen-container-single a.chosen-single { width: 100%; line-height: 30px; display: block; padding: 0 15px 0 5px; }
-/* line 28, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
-gl-multi-select .chosen-container.chosen-container-single a.chosen-single span { width: 100%; }
 /* line 42, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+gl-multi-select .chosen-container.chosen-container-single a.chosen-single span { width: 100%; }
+/* line 56, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices { padding: 5px 25px 0 5px; min-height: 30px; -moz-box-sizing: border-box; box-sizing: border-box; margin: 0; }
-/* line 49, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 63, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li { margin-right: 5px; display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex; line-height: 19px; }
-/* line 57, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 71, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-choice span { -webkit-order: 2; -ms-flex-order: 2; order: 2; line-heigth: 19px; padding: 0 3px; }
-/* line 64, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
-gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-choice a.search-choice-close { -webkit-order: 1; -ms-flex-order: 1; order: 1; height: 19px; width: 19px; background-color: red; }
-/* line 75, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 78, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-choice a.search-choice-close { -webkit-order: 1; -ms-flex-order: 1; order: 1; height: 19px; width: 19px; }
+/* line 88, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-field input { -webkit-order: 1; -ms-flex-order: 1; order: 1; }
-/* line 85, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 98, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container .chosen-drop { display: none; overflow: auto; }
-/* line 92, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 105, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container .chosen-drop .chosen-search input { line-height: 30px; margin: 0; width: 100%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 5px; }
-/* line 103, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 116, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results { display: block; max-height: 160px; overflow: auto; list-style: none; margin: 0; padding: 0; }
-/* line 112, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 125, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li { display: block; padding-left: 35px; line-height: 25px; }
-/* line 126, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 139, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li.group-result { padding-left: 10px; }
-/* line 141, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
-gl-multi-select .chosen-with-drop { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzU4NTk1QiIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); }
-/* line 145, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
-gl-multi-select .chosen-with-drop .chosen-drop { display: block; }
-/* line 152, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 155, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .gl-multi-select-value { padding-left: 5px; display: inline; }
-/* line 157, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
+/* line 160, ../../../../app/theme/styles/glmultiselect/_glmultiselect.layout.scss */
 gl-multi-select .gl-multi-select-label { padding-right: 5px; max-width: 50%; display: inline; }
 
 /* line 3, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
-gl-multi-select .chosen-container { background-color: white; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI0JDQkVDMCIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); background-position: top 13px right 10px; background-repeat: no-repeat; background-size: 10px 10px; }
-/* line 16, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+gl-multi-select .chosen-container { border: 1px solid #EFEFF0; background-color: white; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI0JDQkVDMCIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); background-position: top 12px right 10px; background-repeat: no-repeat; background-size: 10px 10px; }
+/* line 17, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container.chosen-container-single a.chosen-single { outline: 0; }
-/* line 29, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+/* line 22, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+gl-multi-select .chosen-container.chosen-container-single a.chosen-default { color: #BBBDC0; }
+/* line 30, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices { list-style: none; }
-/* line 37, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+/* line 38, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-choice span { background-color: #58585B; }
-/* line 42, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+/* line 43, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-choice a.search-choice-close { background-color: #58585B; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBmaWxsPSIjODA4Mjg1IiBkPSJNNy44LDEzSDUuMkMyLjMsMTMsMCwxMC43LDAsNy44bDAtMi42QzAsMi4zLDIuMywwLDUuMiwwbDIuNiwwQzEwLjcsMCwxMywyLjMsMTMsNS4ydjIuNgoJCUMxMywxMC43LDEwLjcsMTMsNy44LDEzeiIvPgoJPGc+CgkJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkuNSwzLjVsMC4yLDAuMmMwLjQsMC40LDAuNCwwLjctMC4xLDEuMUw3LjgsNi43bDIuMSwyLjFjMC40LDAuNCwwLjQsMC43LTAuMSwxLjFsLTAuMiwwLjIKCQkJYy0wLjQsMC40LTAuOCwwLjUtMS4yLDAuMUw2LjQsOC4xTDQuNiwxMGMtMC41LDAuNS0wLjcsMC41LTEuMiwwLjFMMy4yLDkuOEMyLjcsOS40LDIuOCw5LjEsMy4yLDguNkw1LDYuOGwtMi0yCgkJCUMyLjYsNC40LDIuNyw0LjEsMy4xLDMuN2wwLjItMC4yQzMuOCwzLDQuMSwyLjksNC41LDMuNGwyLDJsMS44LTEuOEM4LjgsMyw5LjEsMyw5LjUsMy41eiIvPgoJPC9nPgo8L2c+Cjwvc3ZnPg==); background-position: center center; background-repeat: no-repeat; background-size: 13px 13px; }
-/* line 54, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+/* line 55, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-field input { outline: 0; border: none; }
-/* line 70, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+/* line 71, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container .chosen-drop .chosen-search input { outline: 0; border: none; border-top: 1px solid #BBBDC0; }
-/* line 79, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+/* line 80, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results { border-top: 1px solid #BBBDC0; }
-/* line 106, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
+/* line 107, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .gl-multi-select-label:after { content: ':'; }
 
 /* line 5, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
+gl-multi-select .chosen-container.chosen-container-active { border: 1px solid #BBBDC0; }
+/* line 9, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
 gl-multi-select .chosen-container.gl-invalid { border: 1px solid #F05A28; }
-/* line 10, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
+/* line 14, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
 gl-multi-select .chosen-container.chosen-disabled, gl-multi-select .chosen-container.chosen-disabled input { background-color: #EFEFF0; }
-/* line 64, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
+/* line 68, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results:empty { border-top: none; }
-/* line 72, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
+/* line 76, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li.active-result.highlighted { background-color: #D8EBF8; }
-/* line 84, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
+/* line 88, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li.result-selected { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8Zz4KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMC44LDQuM2wyLjksM2MwLjIsMC4yLDAuNiwwLjIsMC44LDBsNS45LTYuNSIvPgoJCTxwYXRoIGZpbGw9IiM0MTQwNDIiIGQ9Ik0zLjgsOS41TDAuMiw1LjhjLTAuMi0wLjItMC4yLTAuNiwwLTAuOGwxLjQtMS4zYzAuMi0wLjIsMC42LTAuMiwwLjgsMGwxLjQsMS40YzAuMiwwLjIsMC42LDAuMiwwLjgsMAoJCQlsNC40LTQuOWMwLjItMC4yLDAuNi0wLjIsMC44LDBsMS40LDEuM2MwLjIsMC4yLDAuMiwwLjYsMCwwLjhMNC42LDkuNUM0LjQsOS43LDQsOS44LDMuOCw5LjV6Ii8+Cgk8L2c+CjwvZz4KPC9zdmc+); background-position: center left 15px; background-repeat: no-repeat; background-size: 12px 12px; }
-/* line 97, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
-gl-multi-select .chosen-with-drop { background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzU4NTk1QiIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); }
-/* line 106, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
+/* line 101, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
+gl-multi-select .chosen-with-drop { border: 1px solid #BBBDC0; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iIzU4NTk1QiIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); }
+/* line 111, ../../../../app/theme/styles/glmultiselect/_glmultiselect.state.scss */
 gl-multi-select .gl-error-msg { margin: 5px 0 0 0; padding: 0; color: #F05A28; }
 
 /* line 1, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select { font-family: "HellschreiberSans-Medium"; font-size: 17px; color: #58585B; }
-/* line 7, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
-gl-multi-select .chosen-container { border: 1px solid #BBBDC0; }
-/* line 16, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 14, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container.chosen-container-single a.chosen-single { font-family: "HellschreiberSans-Medium"; font-size: 17px; }
-/* line 22, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 20, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container.chosen-container-single a.chosen-default { font-family: "HellschreiberSans-Medium"; font-size: 17px; }
-/* line 38, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 36, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-choice span { font-family: "HellschreiberSans-Light"; font-size: 14px; color: white; }
-/* line 52, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 50, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container.chosen-container-multi ul.chosen-choices li.search-field input { font-size: 14px; }
-/* line 67, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 65, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container .chosen-drop .chosen-search input { font-size: 16px; }
-/* line 85, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 83, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .chosen-container .chosen-drop ul.chosen-results li.group-result { color: #808284; }
-/* line 100, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 98, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .gl-multi-select-label { font-family: "HellschreiberSans-Medium"; font-size: 17px; }
-/* line 105, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 103, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select .gl-multi-select-value { font-family: "HellschreiberSans-Light"; font-size: 17px; }
-/* line 110, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
+/* line 108, ../../../../app/theme/styles/glmultiselect/_glmultiselect.font.scss */
 gl-multi-select p.gl-error-msg { font-size: 16px; }
