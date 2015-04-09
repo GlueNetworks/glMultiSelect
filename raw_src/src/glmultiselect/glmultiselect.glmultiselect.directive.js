@@ -174,8 +174,6 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
                 }
             });
 
-
-
             // INIT
             if (!angular.isUndefined(scope.settings.view) && scope.settings.view == true) {
                 setViewMode();

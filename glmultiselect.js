@@ -1,8 +1,8 @@
 /*! 
-  glMultiSelect v(0.0.20) 
+  glMultiSelect v(0.0.21) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
-  Release Date: 2015-04-08 
+  Release Date: 2015-04-09 
 */
 angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect").directive("glMultiSelect", [ "$compile", "$timeout", function($compile) {
     "use strict";
