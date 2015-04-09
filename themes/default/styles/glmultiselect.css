@@ -42,7 +42,7 @@ gl-multi-select .gl-multi-select-value { padding-left: 5px; display: inline; }
 gl-multi-select .gl-multi-select-label { padding-right: 5px; max-width: 50%; display: inline; }
 
 /* line 3, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
-gl-multi-select .chosen-container { border: 1px solid #EFEFF0; background-color: white; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI0JDQkVDMCIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); background-position: top 12px right 10px; background-repeat: no-repeat; background-size: 10px 10px; }
+gl-multi-select .chosen-container { border: 1px solid #DDDDDD; background-color: white; background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0iI0JDQkVDMCIgZD0iTTkuNywwLjhMNS4yLDUuMkM1LDUuNCw0LjcsNS40LDQuNiw1LjJMMC4xLDAuOEMtMC4yLDAuNSwwLjEsMCwwLjUsMGw4LjgsMEM5LjcsMCwxMCwwLjUsOS43LDAuOHoiLz4KPC9zdmc+); background-position: top 12px right 10px; background-repeat: no-repeat; background-size: 10px 10px; }
 /* line 17, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
 gl-multi-select .chosen-container.chosen-container-single a.chosen-single { outline: 0; }
 /* line 22, ../../../../app/theme/styles/glmultiselect/_glmultiselect.theme.scss */
