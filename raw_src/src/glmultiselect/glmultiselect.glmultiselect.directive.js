@@ -51,7 +51,7 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? undefined : scope.settings.error;
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? true : scope.settings.editable;
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? undefined : scope.settings.options;
-            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? function(val){ scope.settings.onChange(val, {id:scope.api._data.id,name:scope.api._data.name,settings:scope.settings} ); } : undefined;
+            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? function(evt){ scope.settings.onChange(evt, {id:scope.api._data.id,name:scope.api._data.name,settings:scope.settings} ); } : undefined;
 
             var id = angular.isUndefined(scope.api._data.id) ? "" : "id="+scope.api._data.id+'"';
             var chosenAttrOptions = "";
@@ -76,6 +76,11 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
                     element.find('.chosen-results').attr('data-gl-super-scroll', 'data-gl-super-scroll');
                     errorMsgCheck();
                 })
+                if(angular.isFunction(scope.api._data.onChange)){
+                    elementSelect.on('change',function(evt){
+                        scope.api._data.onChange(evt);
+                    })
+                }
             }
 
             function processEmptiness(value){
@@ -166,13 +171,6 @@ angular.module('glMultiSelect').directive('glMultiSelect', ["$compile", "$timeou
                     }
                 }
             }
-
-            scope.$watch('api._data.value', function (n, o) {
-                if (angular.isFunction(scope.api._data.onChange)) {
-                    scope.api._data.onChange(n, o);
-                    processEmptiness(n);
-                }
-            });
 
             // INIT
             if (!angular.isUndefined(scope.settings.view) && scope.settings.view == true) {

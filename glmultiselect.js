@@ -1,8 +1,8 @@
 /*! 
-  glMultiSelect v(0.0.22) 
+  glMultiSelect v(0.0.23) 
   (c) 2013-2015
   https://gluenetworks.kilnhg.com/Code/Web-Development
-  Release Date: 2015-04-09 
+  Release Date: 2015-05-07 
 */
 angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect").directive("glMultiSelect", [ "$compile", "$timeout", function($compile) {
     "use strict";
@@ -19,6 +19,8 @@ angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect")
                 element.append($compile(elementSelect)(childScope)), elementSelect.on("chosen:ready", function() {
                     processEmptiness(scope.api._data.value), element.find(".chosen-results").attr("data-gl-super-scroll", "data-gl-super-scroll"), 
                     errorMsgCheck();
+                }), angular.isFunction(scope.api._data.onChange) && elementSelect.on("change", function(evt) {
+                    scope.api._data.onChange(evt);
                 });
             }
             function processEmptiness(value) {
@@ -63,8 +65,8 @@ angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect")
             scope.api._data.error = angular.isUndefined(scope.settings.error) ? void 0 : scope.settings.error, 
             scope.api._data.editable = angular.isUndefined(scope.settings.editable) ? !0 : scope.settings.editable, 
             scope.api._data.options = angular.isUndefined(scope.settings.options) ? void 0 : scope.settings.options, 
-            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? function(val) {
-                scope.settings.onChange(val, {
+            scope.api._data.onChange = angular.isFunction(scope.settings.onChange) ? function(evt) {
+                scope.settings.onChange(evt, {
                     id: scope.api._data.id,
                     name: scope.api._data.name,
                     settings: scope.settings
@@ -99,10 +101,7 @@ angular.module("glMultiSelect", [ "glChosen" ]), angular.module("glMultiSelect")
                 scope.api._data.disabled = !0, elementSelect.attr("disabled", !0).trigger("chosen:updated");
             }, scope.api.enable = function() {
                 scope.api._data.disabled = !1, elementSelect.removeAttr("disabled").trigger("chosen:updated");
-            }, scope.$watch("api._data.value", function(n, o) {
-                angular.isFunction(scope.api._data.onChange) && (scope.api._data.onChange(n, o), 
-                processEmptiness(n));
-            }), // INIT
+            }, // INIT
             angular.isUndefined(scope.settings.view) || 1 != scope.settings.view ? setEditMode() : setViewMode();
         }
     };
